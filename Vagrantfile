@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # se der zica, usa o metodo normal via ip:
   # config.vm.network :private_network, ip: "10.10.20.20"
   config.vm.network "private_network", type: "dhcp"
-  config.vm.synced_folder "~/Projetos", "/vagrant", create: true, type: 'nfs'
+  config.vm.synced_folder "~/projetos/rails", "/vagrant", create: true, type: 'nfs'
   
   config.vm.network :forwarded_port, guest: 80, host: 80, auto_correct: true 	 # apache/nginx
   config.vm.network :forwarded_port, guest: 3000, host: 3000, auto_correct: true # rails
