@@ -55,7 +55,7 @@ abra o **postgresql.conf** pra dar _trust_ nos hosts, portas etc
     
 procura por **listen_addresses** e adiciona na linha acima:
 
-    listen_addresses_ = '*'
+    listen_addresses = '*'
 
 salve e agora abra o **pg_hba.conf** pra configurar ele também:
 
