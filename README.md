@@ -65,7 +65,7 @@ e adiciona ao final do arquivo:
 
     host    all             all             0.0.0.0/0               trust
 
-salve e restarta o postgresql: 
+nesse mesmo arquivo, onde tiver **peer**, mude pra **trust*; salve e restarta o postgresql:
 
     sudo service postgresql restart
 
@@ -91,7 +91,9 @@ O esquema é o mesmo da [documentação](https://help.github.com/articles/genera
     ssh-add ~/.ssh/id_rsa
     cat ~/.ssh/id_rsa.pub
 
-cola o hash la nas definições de ssh do seu [github](https://github.com/settings/ssh)
+cola linha toda la nas definições de ssh do seu [github](https://github.com/settings/ssh) e da o confere
+
+    ssh -T git@github.com
 
 ## Comentários finais
 No meu caso fiz esse processo após formatar o OSX e desde então funcionando normalmente. Se houver algum problema com **DHCP**, altere no arquivo **Vagrantfile**:
