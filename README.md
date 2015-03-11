@@ -65,7 +65,7 @@ e adiciona ao final do arquivo:
 
     host    all             all             0.0.0.0/0               trust
 
-nesse mesmo arquivo, onde tiver **peer**, mude pra **trust*; salve e restarta o postgresql:
+nesse mesmo arquivo, onde tiver **peer**, mude pra **trust**; salve e restarta o postgresql:
 
     sudo service postgresql restart
 
