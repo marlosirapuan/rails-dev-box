@@ -7,6 +7,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box       = "ubuntu/trusty64"
   config.vm.hostname  = 'rails-dev-box'
 
+  # se der zica, usa o metodo normal via ip:
+  # config.vm.network :private_network, ip: "10.10.20.20"
   config.vm.network "private_network", type: "dhcp"
   config.vm.synced_folder "~/Projetos", "/vagrant", create: true, type: 'nfs'
   
